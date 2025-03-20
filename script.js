@@ -4,7 +4,7 @@ document.getElementById('comboBox').addEventListener('change', function() {
 
     if (this.value === '영혼각차') {
         const fields = [
-            '신청', '이름', '성별', '음력생일', '사주팔자', '한자주소', '피드백', '요구', '통령사지정'
+            '신청', '이름', '성별', '음력생일', '사주팔자', '한자수소', '피드백', '요구', '통령사지정'
         ];
 
         fields.forEach(field => {
@@ -35,6 +35,8 @@ document.getElementById('submissionForm').addEventListener('submit', function(ev
     }).then(function(response) {
         alert('이메일이 성공적으로 전송되었습니다!');
     }, function(error) {
-        alert('이메일 전송에 실패했습니다.', error);
+        console.error('이메일 전송에 실패했습니다.', error);
+        alert('이메일 전송에 실패했습니다.');
     });
 });
+
