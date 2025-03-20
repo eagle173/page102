@@ -31,7 +31,7 @@ document.getElementById('submissionForm').addEventListener('submit', function(ev
     emailjs.send("service_5fe2i95", "template_q2w2mt8", {
         to_email: formData.get('email'), // 폼에서 입력된 이메일 주소
         reply_to: formData.get('email'), // 회신 이메일 주소
-        message: emailContent // 폼 데이터 내용
+        content: emailContent // 폼 데이터 내용
     }).then(function(response) {
         alert('이메일이 성공적으로 전송되었습니다!');
     }, function(error) {
